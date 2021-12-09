@@ -1,0 +1,49 @@
+.room-main{
+  width: 100vw;
+  height: calc(100vh - 50px);
+  display: flex;
+  justify-content: center;
+}
+.room-detail{
+  width: 1000px;
+  height: 100%;
+  border-right: 2px solid;
+  border-left: 2px solid;
+  overflow: scroll;
+}
+
+.room-set{
+  height: 80px;
+  display: flex;
+  justify-content: center;
+}
+.room-set-name{
+  width: 400px;
+  height: auto;
+  font-size: 30px;
+}
+.room-name{
+  margin: 20px;
+}
+.room-set-member{
+  width: 400px;
+  height: auto;
+  font-size: 20px;
+  padding-top: 2px;
+}
+.room-member{
+  margin: 20px 5px;
+}
+.room-set-delete{
+  width: 200px;
+  height: auto;
+  text-align: center;
+  font-size: 20px;
+}
+.room-delete{
+  background-color: black;
+  color:white;
+  border: 3px double;
+  border-color: gray;
+  margin: 20px 6px;
+}
