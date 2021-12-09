@@ -1,29 +1,33 @@
 <%= render "share/header" %>
 <div class='main_account'>
-  <div class='detail_account'>
-    <div class='account_side'>
-      <div class='login'>Log in</div>
-        <%= render "devise/shared/links" %>
+  <div>
+    <div class='account_error'>
     </div>
-      <div class='account_main'>
-        <div class='account_input'>
-        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          <div class="field">
-          <%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input_form" %>
-          </div>
+      <div class='detail_account'>
+        <div class='account_side'>
+          <div class='login'>Log in</div>
+          <%= render "devise/shared/links" %>
         </div>
-        <div class='account_input'>
-          <div class="field">
-          <%= f.label :password %><br />
-          <%= f.password_field :password, autocomplete: "current-password", class: "input_form" %>
+        <div class='account_main'>
+          <div class='account_input'>
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="field">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input_form" %>
+            </div>
           </div>
-        </div>
+          <div class='account_input'>
+            <div class="field">
+            <%= f.label :password %><br />
+            <%= f.password_field :password, autocomplete: "current-password", class: "input_form" %>
+            </div>
+          </div>
 
-        <div class="actions">
-        <%= f.submit "Log in" ,class: "login_btn" %>
+          <div class="actions">
+            <%= f.submit "Log in" ,class: "login_btn" %>
+          </div>
+          <% end %>
         </div>
-        <% end %>
       </div>
   </div>
 </div>
