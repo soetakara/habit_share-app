@@ -5,6 +5,7 @@
       <div>Habit Maker</div>
     <% end %>
   </div>
+  <% if user_signed_in? %>
   <div class='select'>
       <div class='user-nickname'>
       <%= link_to '名前', "#" , class: 'link' %>
@@ -16,4 +17,5 @@
       <%= link_to 'ログアウト', '#' , class: 'link' %>
       </div>
   </div>
+  <% end %>
 </header>
