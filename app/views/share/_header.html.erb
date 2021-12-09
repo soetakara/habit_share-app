@@ -1,0 +1,19 @@
+<%# CSS・・・assets/stylesheets/share/header.css %>
+<header class='header'>
+  <div class='title'>
+    <%= link_to "#" , class: "link" do %>
+      <div>Habit Maker</div>
+    <% end %>
+  </div>
+  <div class='select'>
+      <div class='user-nickname'>
+      <%= link_to '名前', "#" , class: 'link' %>
+      </div>
+      <div class='new_room'>
+      <%= link_to 'グループ作成', '#' , class: 'link' %>
+      </div>
+      <div class='logout'>
+      <%= link_to 'ログアウト', '#' , class: 'link' %>
+      </div>
+  </div>
+</header>
