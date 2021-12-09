@@ -14,14 +14,14 @@
       <div class='account_main'>
         <div class='account_input'>
           <div class="field">
-          <%= f.label :email %>
+          <div>メールアドレス</div>
           <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input_form" %>
           </div>
         </div>
 
         <div class='account_input'>
           <div class="field">
-          <%= f.label :password %>
+          <div>Password</div>
           <% if @minimum_password_length %>
           <em>(<%= @minimum_password_length %> characters minimum)</em>
           <% end %><br />
