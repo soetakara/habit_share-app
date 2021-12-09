@@ -1,41 +1,46 @@
 <%= render "share/header" %>
 <div class='main_account'>
-  <div class='detail_account'>
-    <div class='account_side'>
-      <div class='login'>Sign up</div>
-      <%= render "devise/shared/links" %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <div>
+    <div class='account_error'>
+    <%= render "devise/shared/error_messages", resource: resource %>
     </div>
-        <div class='account_main'>
-          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-          <%= render "devise/shared/error_messages", resource: resource %>
-            <div class='account_input'>
-              <div class="field">
-                <%= f.label :email %><br />
-                <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input_form" %>
-              </div>
-            </div>
+    <div class='detail_account'>
+      <div class='account_side'>
+        <div class='login'>Sign up</div>
+        <%= render "devise/shared/links" %>
+      </div>
 
-              <div class='account_input'>
-                <div class="field">
-                 <%= f.label :password %>
-                 <% if @minimum_password_length %>
-                 <em>(<%= @minimum_password_length %> characters minimum)</em>
-                 <% end %><br />
-                 <%= f.password_field :password, autocomplete: "new-password" ,class: "input_form" %>
-                </div>
-              </div>
-                
-                <div class='account_input'>
-                  <div class="field">
-                    <%= f.label :password_confirmation %><br />
-                    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input_form"  %>
-                  </div>
-                </div>
-                
-                <div class="actions">
-                <%= f.submit "Sign up", class: "login_btn" %>
-                </div>
-            <% end %>
+      <div class='account_main'>
+        <div class='account_input'>
+          <div class="field">
+          <%= f.label :email %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input_form" %>
+          </div>
         </div>
+
+        <div class='account_input'>
+          <div class="field">
+          <%= f.label :password %>
+          <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "new-password" ,class: "input_form" %>
+          </div>
+        </div>
+
+        <div class='account_input'>
+          <div class="field">
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input_form"  %>
+          </div>
+        </div>
+
+        <div class="actions">
+        <%= f.submit "Sign up", class: "login_btn" %>
+        </div>
+       <% end %>
+      </div>
+    </div>
   </div>
 </div>
