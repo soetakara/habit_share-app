@@ -14,7 +14,7 @@
       <%= link_to 'グループ作成', '#' , class: 'link' %>
       </div>
       <div class='logout'>
-      <%= link_to 'ログアウト', '#' , class: 'link' %>
+      <%= link_to 'ログアウト', destroy_user_session_path, method: :delete , class: 'link' %>
       </div>
   </div>
   <% end %>
