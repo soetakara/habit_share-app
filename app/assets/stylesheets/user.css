@@ -9,9 +9,15 @@
   color: red;
   padding-top: 20px;
 }
-.detail_account{
+.detail_account_login{
   width: 800px;
-  height: 400px;
+  height: 300px;
+  border: 2px double;
+  display: flex;
+}
+.detail_account_sign_up{
+  width: 800px;
+  height: 500px;
   border: 2px double;
   display: flex;
 }

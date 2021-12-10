@@ -5,7 +5,7 @@
     <div class='account_error'>
     <%= render "devise/shared/error_messages", resource: resource %>
     </div>
-    <div class='detail_account'>
+    <div class='detail_account_sign_up'>
       <div class='account_side'>
         <div class='login'>Sign up</div>
         <%= render "devise/shared/links" %>
@@ -14,8 +14,15 @@
       <div class='account_main'>
         <div class='account_input'>
           <div class="field">
+          <div>ニックネーム</div>
+          <%= f.email_field :nickname, autofocus: true, autocomplete: "nickname", class: "input_form" %>
+          </div>
+        </div>
+
+        <div class='account_input'>
+          <div class="field">
           <div>メールアドレス</div>
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input_form" %>
+          <%= f.email_field :email, autocomplete: "email", class: "input_form" %>
           </div>
         </div>
 
