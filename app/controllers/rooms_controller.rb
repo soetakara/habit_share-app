@@ -1,6 +1,7 @@
 class RoomsController < ApplicationController
+  before_action :set_room, only: [:destroy]
+
   def index
-    @rooms = RoomUser.where(user_id: current_user.id)
   end
 
   def new
@@ -18,8 +19,17 @@ class RoomsController < ApplicationController
     end
   end
 
+  def destroy
+    @room.destroy
+    redirect_to root_path
+  end
+
   private
   def room_params
     params.require(:room).permit(:name, user_ids: [])
+  end
+
+  def set_room
+    @room = Room.find(params[:id])
   end
 end
