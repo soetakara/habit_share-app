@@ -8,7 +8,7 @@
   <% if user_signed_in? %>
   <div class='select'>
       <div class='user-nickname'>
-      <%= link_to '名前', "#" , class: 'link' %>
+      <%= link_to current_user.nickname, "#" , class: 'link' %>
       </div>
       <div class='new_room'>
       <%= link_to 'グループ作成', new_room_path , class: 'link' %>
