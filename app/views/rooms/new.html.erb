@@ -1,0 +1,34 @@
+<%# CSS・・・assets/stylesheets/inputform.css %>
+<%= render "share/header" %>
+<div class='room-main'>
+  <div>
+    <div class='room-error'>
+    <%# エラーメッセージを記述する %>
+    </div>
+      <div class='detail_new_room'>
+        <div class='new_room_side'>
+          <div class='room_create'>グループ作成</div>
+        </div>
+        <div class='new_room_main'>
+          <div class='account_input'>
+            <%= form_with  url: "#", local: true do |f| %>
+            <div class="field">
+            <div>メールアドレス</div>
+            <%= f.email_field "hoge", autofocus: true, autocomplete: "email", class: "input_form" %>
+            </div>
+          </div>
+          <div class='account_input'>
+            <div class="field">
+            <%= f.label :password %><br />
+            <%= f.password_field "hoge", autocomplete: "current-password", class: "input_form" %>
+            </div>
+          </div>
+
+          <div class="actions">
+            <%= f.submit "作成" ,class: "login_btn" %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+  </div>
+</div>

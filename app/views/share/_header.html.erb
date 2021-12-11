@@ -1,7 +1,7 @@
 <%# CSS・・・assets/stylesheets/share/header.css %>
 <header class='header'>
   <div class='title'>
-    <%= link_to "#" , class: "link" do %>
+    <%= link_to root_path , class: "link" do %>
       <div>Habit Maker</div>
     <% end %>
   </div>
@@ -11,7 +11,7 @@
       <%= link_to '名前', "#" , class: 'link' %>
       </div>
       <div class='new_room'>
-      <%= link_to 'グループ作成', '#' , class: 'link' %>
+      <%= link_to 'グループ作成', new_room_path , class: 'link' %>
       </div>
       <div class='logout'>
       <%= link_to 'ログアウト', destroy_user_session_path, method: :delete , class: 'link' %>
