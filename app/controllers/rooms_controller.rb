@@ -1,5 +1,6 @@
 class RoomsController < ApplicationController
   def index
+    @rooms = RoomUser.where(user_id: current_user.id)
   end
 
   def new

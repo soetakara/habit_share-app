@@ -10,11 +10,11 @@
           <div class='room_create'>グループ作成</div>
         </div>
         <div class='new_room_main'>
+          <%= form_with model: @room, url: rooms_path, local: true do |f| %>
           <div class='room_input'>
-            <%= form_with model: @room, url: rooms_path, local: true do |f| %>
             <div class="field">
             <div>グループ名</div>
-            <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "グルー名を入力してください",class: "input_form" %>
+            <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "グループ名を入力してください",class: "input_form" %>
             </div>
           </div>
           <div class='room_input'>
