@@ -11,7 +11,7 @@
         </div>
         <div class='new_room_main'>
           <div class='room_input'>
-            <%= form_with model: @room, url: "#", local: true do |f| %>
+            <%= form_with model: @room, url: rooms_path, local: true do |f| %>
             <div class="field">
             <div>グループ名</div>
             <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "グルー名を入力してください",class: "input_form" %>
