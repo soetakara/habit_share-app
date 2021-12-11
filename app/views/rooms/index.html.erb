@@ -3,37 +3,25 @@
 <div class='room-main'>
   <div class='room-detail'>
 
+    <% current_user.rooms.each do |room| %>
     <div class='room-set'>
       <div class='room-set-name'>
-        <div class='room-name'>プログラミング</div>
+        <div class='room-name'><%= room.name %></div>
       </div>
       <div class='room-set-member'>
-        <div class='room-member'>青島</div>
+        <div class='room-member'>
+        <% room.users.where.not(id: current_user.id).each do |user| %>
+        <div>
+        <%= user.nickname %>
+        </div>
+        <% end %>
+        </div>
       </div>
       <div class='room-set-delete'>
         <div class='room-delete'>削除</div>
       </div>
     </div>
-
-    <%# <% current_user.rooms.each do |room| %> %>
-    <%# <div class='room-set'> %>
-      <%# <div class='room-set-name'> %>
-        <%# <div class='room-name'><%= room.name %></div>
-      <%# </div> %>
-      <%# <div class='room-set-member'> %>
-        <%# <div class='room-member'> %>
-        <%# <% room.users.where.not(id: current_user.id).each do |user| %> %>
-        <%# <div> %>
-        <%# <%= user.nickname %> %>
-        <%# </div> %>
-        <%# <% end %> %>
-        <%# </div> %>
-      <%# </div> %>
-      <%# <div class='room-set-delete'> %>
-        <%# <div class='room-delete'>削除</div> %>
-      <%# </div> %>
-    <%# </div> %>
-    <%# <% end %> %>
+    <% end %>
 
   </div>
 </div>
