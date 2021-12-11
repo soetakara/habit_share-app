@@ -1,0 +1,47 @@
+.message_top{
+  background-color: lightblue;
+  height: 350px;
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.habit_list{
+  background-color: whitesmoke;
+  height: 300px;
+  width: 400px;
+  margin-right: 20px;
+}
+
+.message_middle{
+  background-color: white;
+  height: calc(100vh - 470px);
+  min-height: 200px;
+  overflow: scroll;
+}
+
+.message_bottom{
+  background-color:lightblue;
+  height: 70px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.message_input{
+  background-color: lightblue;
+  width: 90%;
+  height: 50px;
+  display: flex;
+}
+.message_form{
+  background-color: whitesmoke;
+  width: calc(100% - 100px);
+  margin-right: 20px;
+}
+.message_send{
+  background-color: coral;
+  width: 100px;
+  text-align: center;
+  padding-top: 15px;
+}
