@@ -20,7 +20,7 @@
           <div class='room_input'>
             <div class="field">
             <div>メンバー</div>
-            <select name="room[user_ids][]">
+            <select name="room[user_ids][]", class="input_form">
               <option value="">ユーザを選択してください</option>
                 <% User.where.not(id: current_user.id).each do |user| %>
                 <option value=<%= user.id %>><%= user.nickname %></option>
