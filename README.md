@@ -65,7 +65,7 @@ Things you may want to cover:
 <!-- messagesテーブル -->
 | Column  | Type       | Options                        |
 | --------| ---------- | ------------------------------ |
-| comment | string     |                                |
+| comment | string     | null: false                    |
 | user    | references | null: false, foreign_key: true |
 | room    | references | null: false, foreign_key: true |
 

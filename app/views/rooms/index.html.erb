@@ -5,9 +5,11 @@
 
     <% current_user.rooms.each do |room| %>
     <div class='room-set'>
+      <%= link_to messages_path, class: "link" do %>
       <div class='room-set-name'>
         <div class='room-name'><%= room.name %></div>
       </div>
+      <% end %>
       <div class='room-set-member'>
         <div class='room-member'>
         <% room.users.where.not(id: current_user.id).each do |user| %>
