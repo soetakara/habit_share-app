@@ -1,3 +1,4 @@
+/* トップページ */
 .room-main{
   width: 100vw;
   height: calc(100vh - 50px);
@@ -7,6 +8,7 @@
 .room-detail{
   width: 1000px;
   height: 100%;
+  position: fixed;
   border-right: 2px solid;
   border-left: 2px solid;
   overflow: scroll;
