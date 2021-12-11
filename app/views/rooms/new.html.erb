@@ -10,22 +10,22 @@
           <div class='room_create'>グループ作成</div>
         </div>
         <div class='new_room_main'>
-          <div class='account_input'>
+          <div class='room_input'>
             <%= form_with  url: "#", local: true do |f| %>
             <div class="field">
-            <div>メールアドレス</div>
+            <div>グループ名</div>
             <%= f.email_field "hoge", autofocus: true, autocomplete: "email", class: "input_form" %>
             </div>
           </div>
-          <div class='account_input'>
+          <div class='room_input'>
             <div class="field">
-            <%= f.label :password %><br />
+            <div>メンバー</div>
             <%= f.password_field "hoge", autocomplete: "current-password", class: "input_form" %>
             </div>
           </div>
 
           <div class="actions">
-            <%= f.submit "作成" ,class: "login_btn" %>
+            <%= f.submit "作成" ,class: "room_btn" %>
           </div>
           <% end %>
         </div>
