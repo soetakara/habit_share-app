@@ -6,13 +6,16 @@
   display: flex;
   justify-content: center;
 }
+
+/* habit_listは後で、habit.cssに移す */
 .habit_list{
   background-color: whitesmoke;
   height: 300px;
   width: 400px;
+}
+.room_habit_list{
   margin-right: 20px;
 }
-
 .message_middle{
   background-color: white;
   height: calc(100vh - 470px);

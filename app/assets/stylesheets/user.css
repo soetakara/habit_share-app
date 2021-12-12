@@ -1,0 +1,71 @@
+.main_user{
+  height: calc(100vh - 50px);
+  display: flex;
+  justify-content: center;
+}
+.center_user{
+  width: 850px;
+}
+
+.top_user{
+  height: 100px;
+  box-sizing: border-box;
+  border-bottom: 3px double;
+  position: relative;
+}
+.top_user_name{
+  height: 50px;
+  width: 850px;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: left;
+  font-size: 20px;
+}
+.left_user_name{
+  width: 150px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.right_user_name{
+  width: 300px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.bottom_user{
+  height: calc(100vh - 150px);
+}
+.user_habit_resist{
+  height: 50px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.resist_btn{
+  background-color: lightblue;
+  width: 100px;
+  height: 80%;
+  margin-left: 10px;
+  border: 1px solid;
+  box-sizing: border-box;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 2px;
+}
+.resist_comment{
+  width: 500px;
+  margin-left: 10px;
+}
+.user_habit_lists{
+  height: calc(100% - 50px);
+  min-height: 318px;
+  box-sizing: border-box;
+  overflow: scroll;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.user_habit_list{
+  margin: 12px;
+}

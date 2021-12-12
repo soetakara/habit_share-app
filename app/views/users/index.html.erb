@@ -1,0 +1,34 @@
+<%# CSS・・・assets/stylesheets/user.css %>
+<%= render "share/header" %>
+<div class='main_user'>
+  <div class='center_user'>
+    <div class='top_user'>
+      <div class='top_user_name'>
+        <div class='left_user_name'>
+        ユーザー名 :
+        </div>
+        <div class='right_user_name'>
+        <%= current_user.nickname %>
+        </div>
+      </div>
+    </div>
+    <div class='bottom_user'>
+      <div class='user_habit_resist'>
+        <div class='resist_btn'>
+        登録
+        </div>
+        <div class='resist_comment'>
+        : 習慣、目標を登録して下さい。
+        </div>
+      </div>
+      <div class='user_habit_lists'>
+        <div class='habit_list user_habit_list'>
+        </div>
+        <div class='habit_list user_habit_list'>
+        </div>
+        <div class='habit_list user_habit_list'>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
