@@ -14,41 +14,41 @@
           </div>
       </div>
       <div class='new_room_main'>
-        <%= form_with url: "#", local: true do |f| %>
+        <%= form_with model: @habit, url: habits_path, local: true do |f| %>
         <div class='room_input'>
           <div class="field">
             <div>タイトル</div>
-            <%= f.text_field 'hoge', autofocus: true, autocomplete: "name", placeholder: "リストのタイトルを入力してください",class: "input_form" %>
+            <%= f.text_field :title, autofocus: true, autocomplete: "name", placeholder: "リストのタイトルを入力してください",class: "input_form" %>
           </div>
         </div>
         <div class='room_input'>
           <div class="field">
             <div>項目①</div>
-            <%= f.text_field 'hoge', autocomplete: "name", placeholder: "項目を入力してください",class: "input_form" %>
+            <%= f.text_field :item1, autocomplete: "name", placeholder: "項目を入力してください",class: "input_form" %>
           </div>
         </div>
         <div class='room_input'>
           <div class="field">
             <div>項目②</div>
-            <%= f.text_field 'hoge', autocomplete: "name", placeholder: "項目を入力してください",class: "input_form" %>
+            <%= f.text_field :item2, autocomplete: "name", placeholder: "項目を入力してください",class: "input_form" %>
           </div>
         </div>
         <div class='room_input'>
           <div class="field">
             <div>項目③</div>
-            <%= f.text_field 'hoge', autocomplete: "name", placeholder: "項目を入力してください",class: "input_form" %>
+            <%= f.text_field :item3, autocomplete: "name", placeholder: "項目を入力してください",class: "input_form" %>
           </div>
         </div>
         <div class='room_input'>
           <div class="field">
             <div>項目④</div>
-            <%= f.text_field 'hoge', autocomplete: "name", placeholder: "項目を入力してください",class: "input_form" %>
+            <%= f.text_field :item4, autocomplete: "name", placeholder: "項目を入力してください",class: "input_form" %>
           </div>
         </div>
         <div class='room_input'>
           <div class="field">
             <div>項目⑤</div>
-            <%= f.text_field 'hoge', autocomplete: "name", placeholder: "項目を入力してください",class: "input_form" %>
+            <%= f.text_field :item5, autocomplete: "name", placeholder: "項目を入力してください",class: "input_form" %>
           </div>
         </div>
           <%= f.submit "登録" ,class: "room_btn" %>
