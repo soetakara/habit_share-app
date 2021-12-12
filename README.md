@@ -81,11 +81,11 @@ Things you may want to cover:
 - belongs_to :room
 - belongs_to :user
 
-<!-- room_habitsテーブル -->
+<!-- message_habitsテーブル -->
 | Column  | Type       | Options                        |
 | --------| ---------- | ------------------------------ |
 | habit   | references | null: false, foreign_key: true |
-| room    | references | null: false, foreign_key: true |
+| message | references | null: false, foreign_key: true |
 
-- belongs_to :room
+- belongs_to :message
 - belongs_to :habit
