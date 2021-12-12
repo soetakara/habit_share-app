@@ -24,18 +24,18 @@
   box-sizing: border-box;
   padding: 10px;
   overflow: scroll;
-  /* display: flex; */
-  /* flex-direction: column; */
 }
 .right_message_main{
   height: auto;
   display: flex;
   justify-content: flex-end;
+  margin-top: 5px;
 }
 .left_message_main{
   height: auto;
   display: flex;
   justify-content: flex-start;
+  margin-top: 5px;
 }
 .message_border{
   height: auto;
