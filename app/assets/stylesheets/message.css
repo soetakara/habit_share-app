@@ -24,12 +24,24 @@
   box-sizing: border-box;
   padding: 10px;
   overflow: scroll;
+  /* display: flex; */
+  /* flex-direction: column; */
 }
-.message_main{
+.right_message_main{
   height: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.left_message_main{
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+}
+.message_border{
+  height: auto;
+  display: inline-block;
   box-sizing: border-box;
   border: 1px solid;
-  display: inline-block;
 }
 .message_main_top{
   display: flex;
@@ -49,32 +61,39 @@
 .message_bottom{
   background-color:lightblue;
   height: 70px;
-  padding-top: 10px;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
+  position: relative;
 }
 .message_input{
   width: 90%;
   height: 50px;
   display: flex;
+  position: absolute;
+  top: 10px;
+  position: relative;
 }
+
 .message_form{
   background-color: whitesmoke;
-  height: 100%;
+  height: 50px;
   width: calc(100vw*0.9 - 130px);
   margin-right: 20px;
   box-sizing: border-box;
   display: inline-block;
+  position: absolute;
 }
 .message_send{
   background-color: coral;
   width: 100px;
   height: 100%;
   text-align: center;
+  position: absolute;
+  right: 0;
 }
 .comment_form{
   width: 100%;
-  height: 100%;
+  height: 50px;
   box-sizing: border-box;
 }

@@ -1,13 +1,19 @@
-<div class='message_main'>
-  <div class='message_main_top'>
-    <div class='message_name'>
-    タカ
+<% if message.user.id == current_user.id %>
+<div class='left_message_main'>
+<% else %>
+<div class='right_message_main'>
+<% end %>
+  <div class='message_border'>
+    <div class='message_main_top'>
+      <div class='message_name'>
+      <%= message.user.nickname %>
+      </div>
+      <div class='message_date'>
+      <%= l message.created_at %>
+      </div>
     </div>
-    <div class='message_date'>
-    5月
+    <div class='message_comment'>
+    <%= message.comment %>
     </div>
-  </div>
-  <div class='message_comment'>
-  うううううううううううううううううううううううううううううう
   </div>
 </div>
