@@ -45,8 +45,7 @@ Things you may want to cover:
 - has_many :room_users
 - has_many :users, through: :room_users
 - has_many :messages
-- has_many :room_habits
-- has_many :habits, through: :room_habits
+
 
 <!-- habitsテーブル -->
 | Column | Type   | Options                        |
@@ -72,6 +71,8 @@ Things you may want to cover:
 
 - belongs_to :room
 - belongs_to :user
+- has_many :message_habits
+- has_many :habits, through: :message_habits
 
 <!-- room_usersテーブル -->
 | Column  | Type       | Options                        |
