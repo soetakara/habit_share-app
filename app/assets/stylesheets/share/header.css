@@ -9,6 +9,7 @@
 .title {
   background-color:deepskyblue;
   width: 300px;
+  min-width: 200px;
   height: auto;
   padding: 5px 0;
   font-size: 30px;

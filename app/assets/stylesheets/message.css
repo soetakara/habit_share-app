@@ -5,6 +5,7 @@
   padding: 20px;
   display: flex;
   justify-content: center;
+  overflow: scroll;
 }
 
 /* habit_listは後で、habit.cssに移す */
@@ -20,31 +21,79 @@
   background-color: white;
   height: calc(100vh - 470px);
   min-height: 200px;
+  box-sizing: border-box;
+  padding: 10px;
   overflow: scroll;
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+.right_message_main{
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.left_message_main{
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+}
+.message_border{
+  height: auto;
+  display: inline-block;
+  box-sizing: border-box;
+  border: 1px solid;
+}
+.message_main_top{
+  display: flex;
+  justify-content: left;
+}
+.message_name{
+  margin-left: 5px;
+  text-decoration: underline;
+}
+.message_date{
+  margin: 0px 10px;
+}
+.message_comment{
+  margin: 5px;
 }
 
 .message_bottom{
   background-color:lightblue;
   height: 70px;
-  padding-top: 10px;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
+  position: relative;
 }
 .message_input{
-  background-color: lightblue;
   width: 90%;
   height: 50px;
   display: flex;
+  position: absolute;
+  top: 10px;
+  position: relative;
 }
+
 .message_form{
   background-color: whitesmoke;
-  width: calc(100% - 100px);
+  height: 50px;
+  width: calc(100vw*0.9 - 130px);
   margin-right: 20px;
+  box-sizing: border-box;
+  display: inline-block;
+  position: absolute;
 }
 .message_send{
   background-color: coral;
   width: 100px;
+  height: 100%;
   text-align: center;
-  padding-top: 15px;
+  position: absolute;
+  right: 0;
+}
+.comment_form{
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
 }
