@@ -51,6 +51,7 @@ Things you may want to cover:
 <!-- habitsテーブル -->
 | Column | Type   | Options                        |
 | ------ | ------ | ------------------------------ |
+| title  | string | null: false                    |
 | item1  | string | null: false                    |
 | item2  | string |                                |
 | item3  | string |                                |
