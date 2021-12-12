@@ -35,7 +35,7 @@ Things you may want to cover:
 - has_many :room_users
 - has_many :rooms, through: :room_users
 - has_many :messages
-- has_one  :habits
+- has_many :habits
 
 <!-- roomsテーブル -->
 | Column | Type   | Options     |
@@ -60,8 +60,8 @@ Things you may want to cover:
 | user   | string | null: false, foreign_key: true |
 
 - belongs_to :user
-- has_many :room_habits
-- has_many :rooms, through: :room_habits
+- has_many :message_habits
+- has_many :rooms, through: :message_habits
 
 <!-- messagesテーブル -->
 | Column  | Type       | Options                        |
