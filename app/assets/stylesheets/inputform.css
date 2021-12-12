@@ -1,5 +1,6 @@
 /* 共通 */
 .main_account{
+  width: 100vw;
   height: calc(100vh - 50px);
   display: flex;
   justify-content: center;
@@ -91,4 +92,17 @@
   height: 50px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 25px;
+}
+
+/* 習慣、目標作成 */
+.detail_new_habit{
+  width: 800px;
+  height: 620px;
+  border: 2px double;
+  display: flex;
+}
+
+.habit_resist_explantion {
+  text-decoration: underline;
+  font-size: 18px;
 }

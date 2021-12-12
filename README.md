@@ -35,7 +35,7 @@ Things you may want to cover:
 - has_many :room_users
 - has_many :rooms, through: :room_users
 - has_many :messages
-- has_one  :habits
+- has_many :habits
 
 <!-- roomsテーブル -->
 | Column | Type   | Options     |
@@ -45,12 +45,12 @@ Things you may want to cover:
 - has_many :room_users
 - has_many :users, through: :room_users
 - has_many :messages
-- has_many :room_habits
-- has_many :habits, through: :room_habits
+
 
 <!-- habitsテーブル -->
 | Column | Type   | Options                        |
 | ------ | ------ | ------------------------------ |
+| title  | string | null: false                    |
 | item1  | string | null: false                    |
 | item2  | string |                                |
 | item3  | string |                                |
@@ -59,8 +59,8 @@ Things you may want to cover:
 | user   | string | null: false, foreign_key: true |
 
 - belongs_to :user
-- has_many :room_habits
-- has_many :rooms, through: :room_habits
+- has_many :message_habits
+- has_many :rooms, through: :message_habits
 
 <!-- messagesテーブル -->
 | Column  | Type       | Options                        |
@@ -71,6 +71,8 @@ Things you may want to cover:
 
 - belongs_to :room
 - belongs_to :user
+- has_many :message_habits
+- has_many :habits, through: :message_habits
 
 <!-- room_usersテーブル -->
 | Column  | Type       | Options                        |
@@ -81,11 +83,11 @@ Things you may want to cover:
 - belongs_to :room
 - belongs_to :user
 
-<!-- room_habitsテーブル -->
+<!-- message_habitsテーブル -->
 | Column  | Type       | Options                        |
 | --------| ---------- | ------------------------------ |
 | habit   | references | null: false, foreign_key: true |
-| room    | references | null: false, foreign_key: true |
+| message | references | null: false, foreign_key: true |
 
-- belongs_to :room
+- belongs_to :message
 - belongs_to :habit
