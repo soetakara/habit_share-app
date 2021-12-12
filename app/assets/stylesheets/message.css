@@ -55,20 +55,26 @@
   box-sizing: border-box;
 }
 .message_input{
-  background-color: lightblue;
   width: 90%;
   height: 50px;
   display: flex;
 }
 .message_form{
   background-color: whitesmoke;
-  width: calc(100% - 100px);
+  height: 100%;
+  width: calc(100vw*0.9 - 130px);
   margin-right: 20px;
   box-sizing: border-box;
+  display: inline-block;
 }
 .message_send{
   background-color: coral;
   width: 100px;
+  height: 100%;
   text-align: center;
-  padding-top: 15px;
+}
+.comment_form{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
 }

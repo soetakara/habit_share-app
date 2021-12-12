@@ -7,24 +7,15 @@
   </div>
 </div>
 <div class='message_middle'>
-  <div class='message_main'>
-    <div class='message_main_top'>
-      <div class='message_name'>
-      タカ
-      </div>
-      <div class='message_date'>
-      5月
-      </div>
-    </div>
-    <div class='message_comment'>
-    うううううううううううううううううううううううううううううう
-    </div>
-  </div>
+  <%= render partial: 'message', collection: @messages %>
 </div>
 <div class='message_bottom'>
   <div class='message_input'>
+    <%= form_with model: @message, url: messages_path(room_id: @room_id), local: true do |f| %>
     <div class='message_form'>
+    <%= f.text_field :comment, class: 'comment_form' %>
     </div>
-    <div class='message_send'>SEND</div>
+    <%= f.submit 'SEND', class: 'message_send' %>
+    <% end %>
   </div>
 </div>

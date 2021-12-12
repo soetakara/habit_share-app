@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root to: "rooms#index"
 
   resources :rooms, only: [:new, :create, :destroy]
-  resources :messages, only: [:index]
+  resources :messages, only: [:index, :create]
   resources :users, only: [:index]
   resources :habits, only: [:new, :create]
 end
