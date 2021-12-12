@@ -5,6 +5,7 @@
   padding: 20px;
   display: flex;
   justify-content: center;
+  overflow: scroll;
 }
 
 /* habit_listは後で、habit.cssに移す */
@@ -20,7 +21,29 @@
   background-color: white;
   height: calc(100vh - 470px);
   min-height: 200px;
+  box-sizing: border-box;
+  padding: 10px;
   overflow: scroll;
+}
+.message_main{
+  height: auto;
+  box-sizing: border-box;
+  border: 1px solid;
+  display: inline-block;
+}
+.message_main_top{
+  display: flex;
+  justify-content: left;
+}
+.message_name{
+  margin-left: 5px;
+  text-decoration: underline;
+}
+.message_date{
+  margin: 0px 10px;
+}
+.message_comment{
+  margin: 5px;
 }
 
 .message_bottom{
@@ -41,6 +64,7 @@
   background-color: whitesmoke;
   width: calc(100% - 100px);
   margin-right: 20px;
+  box-sizing: border-box;
 }
 .message_send{
   background-color: coral;
