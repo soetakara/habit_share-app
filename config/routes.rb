@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :rooms, only: [:new, :create, :destroy] do
     resources :messages, only: [:index, :create]
-    resources :habits, only: [:index, :new, :create]
+    resources :habits, only: [:new, :create]
   end
   resources :users, only: [:index]
 end
