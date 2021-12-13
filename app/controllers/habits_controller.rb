@@ -4,16 +4,16 @@ class HabitsController < ApplicationController
     @room = Room.find(params[:room_id])
   end
   def create
-    @room = Room.find(params[:room_id])
-    @habit = @room.habits.new(habit_params)
+    @habit = Habit.new(habit_params)
+    binding.pry
     if @habit.save
-      redirect_to room_messages_path(@room)
+      redirect_to "/rooms/#{@habit.room_ids[0]}/messages"
     else
       render :new
     end
   end
   private
   def habit_params
-    params.require(:habit).permit(:title, :item1, :item2, :item3, :item4, :item5).merge(user_id: current_user.id)
+    params.require(:habit).permit(:title, :item1, :item2, :item3, :item4, :item5, room_ids: []).merge(user_id: current_user.id)
   end
 end

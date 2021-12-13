@@ -14,7 +14,7 @@
           </div>
       </div>
       <div class='new_room_main'>
-        <%= form_with model: [@room, @habit], local: true do |f| %>
+        <%= form_with model: @habit, local: true do |f| %>
         <div class='room_input'>
           <div class="field">
             <div>タイトル</div>
@@ -51,6 +51,7 @@
             <%= f.text_field :item5, autocomplete: "name", placeholder: "項目を入力してください",class: "input_form" %>
           </div>
         </div>
+          <input name="habit[room_ids][]" type="hidden" value=<%= @room.id %>>
           <%= f.submit "登録" ,class: "room_btn" %>
         <%end%>
       </div>
