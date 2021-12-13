@@ -1,4 +1,6 @@
 class HabitsController < ApplicationController
+  def index
+  end
   def new
     @habit = Habit.new
   end
