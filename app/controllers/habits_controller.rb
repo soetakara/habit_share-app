@@ -1,11 +1,13 @@
 class HabitsController < ApplicationController
   def new
     @habit = Habit.new
+    @room = Room.find(params[:room_id])
   end
   def create
-    @habit = Habit.new(habit_params)
+    @room = Room.find(params[:room_id])
+    @habit = @room.habits.new(habit_params)
     if @habit.save
-      redirect_to users_path
+      redirect_to room_messages_path(@room)
     else
       render :new
     end

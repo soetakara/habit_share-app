@@ -1,9 +1,20 @@
 <%# CSS・・・assets/stylesheets/message.css %>
 <%= render "share/header" %>
 <div class='message_top'>
-  <div class='habit_list room_habit_list'>
+  <div class='room_habit_list'>
+    <div class='habit_list' >
+    </div>
+    <div class='room_list_bottom'>
+    <%= link_to "/rooms/#{@room.id}/habits/new", class: "link" do %>
+    <div class='resist_btn'>
+    登録
+    </div>
+    <% end %>
+    </div>
   </div>
-  <div class='habit_list room_habit_list'>
+  <div class='room_habit_list'>
+    <div class='habit_list'>
+    </div>
   </div>
 </div>
 <div class='message_middle'>

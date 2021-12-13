@@ -14,7 +14,7 @@
           </div>
       </div>
       <div class='new_room_main'>
-        <%= form_with model: @habit, url: habits_path, local: true do |f| %>
+        <%= form_with model: [@room, @habit], local: true do |f| %>
         <div class='room_input'>
           <div class="field">
             <div>タイトル</div>

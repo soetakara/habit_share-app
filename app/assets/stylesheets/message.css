@@ -1,6 +1,6 @@
 .message_top{
   background-color: lightblue;
-  height: 350px;
+  height: 400px;
   box-sizing: border-box;
   padding: 20px;
   display: flex;
@@ -9,11 +9,18 @@
 }
 
 .room_habit_list{
+  background-color:lightpink;
   margin-right: 20px;
+  height: 100%;
 }
+.room_list_bottom{
+  display: flex;
+  height: 70px;
+}
+
 .message_middle{
   background-color: white;
-  height: calc(100vh - 470px);
+  height: calc(100vh - 520px);
   min-height: 200px;
   box-sizing: border-box;
   padding: 10px;
