@@ -26,7 +26,6 @@ class RoomsController < ApplicationController
       if room_habit.room_id == @room.id && room_habit.habit_id == params[:habit_id].to_i
         @room_habit = RoomHabit.find(room_habit.id)
         @room_habit[:habit_id] = params[:select_habit_id]
-        # 上記1を変更したhabit_idの変数にする
         @room_habit.save
         redirect_to "/rooms/#{@room.id}/messages"
       end

@@ -51,7 +51,6 @@
             <%= f.text_field :item5, autocomplete: "name", placeholder: "項目を入力してください",class: "input_form" %>
           </div>
         </div>
-          <input name="habit[room_ids][]" type="hidden" value=<%= @room.id %>>
           <%= f.submit "登録" ,class: "room_btn" %>
         <%end%>
       </div>

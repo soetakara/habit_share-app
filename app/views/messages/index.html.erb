@@ -6,7 +6,7 @@
   <div class='room_habit_list'>
       <div class='room_list_bottom'>
         <div class='message_user_name'>
-        <%= current_user.nickname %>
+        <%= habit.user.nickname %>
         </div>
       </div>
       <div class='habit_list' >
@@ -23,6 +23,7 @@
             </div>
           </div>
           <div class='habit_list_right_btn'>
+          <% if current_user.id == habit.user_id %>
             <div class='habit_list_edit_delete'>
               <%= f.submit "変更" ,class: "habit_edit_delete_btn message_habit_btn" %>
             </div>
@@ -31,6 +32,7 @@
               登録
               </div>
             </div>
+            <% end %>
           </div>
         </div>
           <div class='habit_list_bottom'>
@@ -46,7 +48,6 @@
       </div>
   </div>
   <% end %>
-
 </div>
 <div class='message_middle'>
   <%= render partial: 'message', collection: @messages %>
