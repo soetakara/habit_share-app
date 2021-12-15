@@ -9,13 +9,28 @@
 }
 
 .room_habit_list{
-  background-color:lightpink;
+  /* background-color:lightpink; */
   margin-right: 20px;
   height: 100%;
+}
+.habit_form{
+  height: 50px;
+  width: 220px;
+  margin-bottom: 2px;
+  font-size: 25px;
+}
+.message_habit_btn{
+  width:  70px;
 }
 .room_list_bottom{
   display: flex;
   height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.message_user_name{
+  font-size: 40px;
 }
 
 .message_middle{

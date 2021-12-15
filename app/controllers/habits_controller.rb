@@ -5,9 +5,8 @@ class HabitsController < ApplicationController
   end
   def create
     @habit = Habit.new(habit_params)
-    binding.pry
     if @habit.save
-      redirect_to "/rooms/#{@habit.room_ids[0]}/messages"
+      redirect_to room_messages_path(@habit.room_ids[0], habit_id: @habit.id)
     else
       render :new
     end

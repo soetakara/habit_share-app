@@ -1,21 +1,52 @@
 <%# CSS・・・assets/stylesheets/message.css %>
 <%= render "share/header" %>
 <div class='message_top'>
+
+  <% @habits.each do |habit| %>
   <div class='room_habit_list'>
-    <div class='habit_list' >
-    </div>
-    <div class='room_list_bottom'>
-    <%= link_to new_habit_path(room_id: @room.id), class: "link" do %>
-    <div class='resist_btn'>
-    登録
-    </div>
-    <% end %>
-    </div>
+      <div class='room_list_bottom'>
+        <div class='message_user_name'>
+        <%= current_user.nickname %>
+        </div>
+      </div>
+      <div class='habit_list' >
+      <%= form_with model: @room, url: room_path(@room.id, habit_id: habit.id), method: :patch, local: true do |f| %>
+        <div class='habit_list_top'>
+          <div class='habit_list_left_btn'>
+            <div class='habit_title'>
+            <select name="select_habit_id", class="habit_form">
+                <option value=""><%= habit.title %></option>
+                <% @my_habits.each do |habit_select| %>
+                <option value=<%= habit_select.id %>><%= habit_select.title %></option>
+                <% end %>
+            </select>
+            </div>
+          </div>
+          <div class='habit_list_right_btn'>
+            <div class='habit_list_edit_delete'>
+              <%= f.submit "変更" ,class: "habit_edit_delete_btn message_habit_btn" %>
+            </div>
+            <div class='habit_list_edit_delete'>
+              <div class='habit_edit_delete_btn'>
+              登録
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class='habit_list_bottom'>
+            <ul>
+            <li class='habit_item'><%= habit.item1 %></li>
+            <li class='habit_item'><%= habit.item2 %></li>
+            <li class='habit_item'><%= habit.item3 %></li>
+            <li class='habit_item'><%= habit.item4 %></li>
+            <li class='habit_item'><%= habit.item5 %></li>
+            </ul>
+          </div>
+      <% end %>
+      </div>
   </div>
-  <div class='room_habit_list'>
-    <div class='habit_list'>
-    </div>
-  </div>
+  <% end %>
+
 </div>
 <div class='message_middle'>
   <%= render partial: 'message', collection: @messages %>
