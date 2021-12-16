@@ -1,6 +1,7 @@
 class HabitsController < ApplicationController
   def new
     @habit = Habit.new
+    # @room = Room.find(params[:room_id])
   end
   def create
     @habit = Habit.new(habit_params)

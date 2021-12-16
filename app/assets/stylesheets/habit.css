@@ -1,0 +1,52 @@
+.habit_list{
+  background-color: whitesmoke;
+  height: 300px;
+  width: 400px;
+}
+.habit_list_top{
+  height: 60px;
+  box-sizing: border-box;
+  border-bottom: 3px double;
+  display: flex;
+  justify-content: space-between;
+}
+.habit_list_left_btn{
+  width: 240px;
+  position: relative;
+}
+.habit_title{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 20px;
+  box-sizing: border-box;
+  margin-left: 10px;
+}
+.habit_list_right_btn{
+  width: 160px;
+  display: flex;
+  font-size: 20px;
+}
+.habit_list_edit_delete{
+  width: 80px;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 5px;
+}
+.habit_edit_delete_btn{
+  background-color: coral;
+  height: 100%;
+  padding-top: 7px;
+  box-sizing: border-box;
+  border: 1px solid;
+}
+
+.habit_list_bottom{
+  height: calc(100% - 60px);
+  box-sizing: border-box;
+  padding: 15px 15px 15px 40px;
+}
+.habit_item{
+  font-size: 25px;
+  list-style: square;
+}

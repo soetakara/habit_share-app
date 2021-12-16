@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class MessageHabitTest < ActiveSupport::TestCase
+class RoomHabitTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

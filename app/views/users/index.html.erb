@@ -23,13 +23,9 @@
         : 習慣、目標を登録して下さい。
         </div>
       </div>
+       <%# CSS・・・assets/stylesheets/user.css %>
       <div class='user_habit_lists'>
-        <div class='habit_list user_habit_list'>
-        </div>
-        <div class='habit_list user_habit_list'>
-        </div>
-        <div class='habit_list user_habit_list'>
-        </div>
+        <%= render partial: 'list', collection: @habits %>
       </div>
     </div>
   </div>
