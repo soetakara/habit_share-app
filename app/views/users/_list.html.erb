@@ -6,11 +6,13 @@
       </div>
     </div>
     <div class='habit_list_right_btn'>
+      <%= link_to edit_habit_path(list.id),  class: "link" do %>
       <div class='habit_list_edit_delete'>
         <div class='habit_edit_delete_btn'>
         編集
         </div>
       </div>
+      <% end %>
       <%= link_to habit_path(list.id), method: :delete,  class: "link" do %>
       <div class='habit_list_edit_delete'>
         <div class='habit_edit_delete_btn'>
