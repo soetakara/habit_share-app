@@ -11,11 +11,13 @@
         編集
         </div>
       </div>
+      <%= link_to habit_path(list.id), method: :delete,  class: "link" do %>
       <div class='habit_list_edit_delete'>
         <div class='habit_edit_delete_btn'>
         削除
         </div>
       </div>
+      <% end %>
     </div>
   </div>
   <div class='habit_list_bottom'>
