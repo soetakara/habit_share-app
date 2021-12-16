@@ -4,7 +4,11 @@ Rails.application.routes.draw do
 
   root to: "rooms#index"
 
-  resources :rooms, only: [:new, :create, :destroy, :update] do
+  resources :rooms, only: [:new, :create, :destroy] do
+    member do
+      patch 'habit_change'
+      post 'habit_add'
+    end
     resources :messages, only: [:index, :create]
   end
   resources :users, only: [:index]

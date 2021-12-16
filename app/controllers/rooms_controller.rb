@@ -19,7 +19,12 @@ class RoomsController < ApplicationController
     end
   end
 
-  def update
+  def destroy
+    @room.destroy
+    redirect_to root_path
+  end
+
+  def habit_change
     @room = Room.find(params[:id])  
     @room_habits = RoomHabit.all
     @room_habits.each_with_index do |room_habit|
@@ -32,9 +37,14 @@ class RoomsController < ApplicationController
     end
   end
 
-  def destroy
-    @room.destroy
-    redirect_to root_path
+  def habit_add
+    @room = params[:id].to_i 
+    @habit = params[:select_habit_id].to_i
+    roomhabit_params = {}
+    roomhabit_params[:room_id] = @room
+    roomhabit_params[:habit_id] = @habit
+    RoomHabit.create(roomhabit_params)
+    redirect_to "/rooms/#{@room}/messages"
   end
 
   private
@@ -45,5 +55,6 @@ class RoomsController < ApplicationController
   def set_room
     @room = Room.find(params[:id])
   end
+
 end
 
