@@ -14,12 +14,18 @@
         <div class='habit_list_top'>
           <div class='habit_list_left_btn'>
             <div class='habit_title'>
+            <% if current_user.id == habit.user_id %>
             <select name="select_habit_id", class="habit_form">
                 <option value=""><%= habit.title %></option>
                 <% @my_habits.each do |habit_select| %>
                 <option value=<%= habit_select.id %>><%= habit_select.title %></option>
                 <% end %>
             </select>
+            <% elsif %>
+            <div class='habit_form'>
+            <%= habit.title %>
+            </div>
+            <% end %>
             </div>
           </div>
           <div class='habit_list_right_btn'>
@@ -48,6 +54,37 @@
       </div>
   </div>
   <% end %>
+  <% if @not_habits.empty? %>
+  <% elsif %>
+  <% @not_habits.each do |not_habit| %>
+    <div class='room_habit_list'>
+      <div class='room_list_bottom'>
+        <div class='message_user_name'>
+        <%= not_habit.nickname %>
+        </div>
+      </div>
+      <div class='habit_list' >
+        <div class='habit_list_top'>
+          <div class='habit_list_left_btn'>
+          </div>
+          <div class='habit_list_right_btn'>
+          <% if current_user.id == not_habit.id %>
+            <div class='habit_list_edit_delete'>
+            </div>
+            <div class='habit_list_edit_delete'>
+              <div class='habit_edit_delete_btn'>
+              登録
+              </div>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+
+
 </div>
 <div class='message_middle'>
   <%= render partial: 'message', collection: @messages %>
