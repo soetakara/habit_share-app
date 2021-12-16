@@ -1,5 +1,5 @@
 class HabitsController < ApplicationController
-  before_action :set_habit, only: [:destroy]
+  before_action :set_habit, only: [:edit, :update, :destroy]
   def new
     @habit = Habit.new
     # @room = Room.find(params[:room_id])
@@ -10,6 +10,17 @@ class HabitsController < ApplicationController
       redirect_to users_path
     else
       render :new
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    if @habit.update(habit_params)
+      redirect_to users_path
+    else
+      render :edit
     end
   end
 
