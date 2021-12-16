@@ -11,6 +11,9 @@ class HabitsController < ApplicationController
       render :new
     end
   end
+
+  def destroy
+  end
   private
   def habit_params
     params.require(:habit).permit(:title, :item1, :item2, :item3, :item4, :item5).merge(user_id: current_user.id)

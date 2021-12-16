@@ -12,5 +12,5 @@ Rails.application.routes.draw do
     resources :messages, only: [:index, :create]
   end
   resources :users, only: [:index]
-  resources :habits, only: [:new, :create]
+  resources :habits, only: [:new, :create, :destroy]
 end
